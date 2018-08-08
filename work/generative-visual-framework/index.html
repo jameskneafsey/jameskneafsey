@@ -1,0 +1,430 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><style>@font-face {
+    font-family: ubuntu;
+    src: url('/fonts/ubuntu-r-webfont.woff2') format('woff2'),
+         url('/fonts/ubuntu-r-webfont.woff') format('woff'),
+         url('/fonts/ubuntu-r-webfont.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: ubuntu-light;
+    src: url('/fonts/ubuntu-l-webfont.woff2') format('woff2'),
+         url('/fonts/ubuntu-l-webfont.woff') format('woff'),
+         url('/fonts/ubuntu-l-webfont.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: ubuntu-medium;
+    src: url('/fonts/ubuntu-m-webfont.woff2') format('woff2'),
+         url('/fonts/ubuntu-m-webfont.woff') format('woff'),
+         url('/fonts/ubuntu-m-webfont.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: ubuntu-condensed;
+    src: url('/fonts/ubuntu-c-webfont.woff2') format('woff2'),
+         url('/fonts/ubuntu-c-webfont.woff') format('woff'),
+         url('/fonts/ubuntu-c-webfont.ttf') format('truetype');
+}
+
+
+@font-face {
+    font-family:"MADEGoodTimeScript";
+    src: url("/fonts/MADE GoodTime Script.woff2") format("woff2"),
+         url("/fonts/MADE GoodTime Script.woff") format("woff"),
+         url("/fonts/MADE GoodTime Script.otf") format("opentype");
+    font-style:normal;
+    font-weight:400;
+}
+:root {
+    --primary: #EB4E38;
+    --secondary: #EB9938;
+    --tertiary: #FFC887;
+    --black: #333333;
+    --white: #ffffff;
+    --block-min: 15em;
+}
+
+* {
+    font-family: ubuntu, sans-serif;
+    color: var(--black);
+}
+
+body {
+    font-size: 1.2em;
+    margin: 2em 0;
+}
+
+h1 {
+    font-size: 1.2em;
+    margin-top: 0;
+}
+
+h1.page-title {
+    font-family: ubuntu, sans-serif;
+    font-size: 1.5em;
+    margin: 0;
+    text-align: center;
+}
+
+h2 {
+    font-family: MADEGoodTimeScript, sans-serif;
+    font-size: 1.5em;
+    margin: 0;
+}
+
+a {
+    color: var(--secondary);
+    text-decoration: none;
+    transition: color .2s;
+}
+
+a.inline {
+    display: inline;
+}
+
+img {
+    max-width: 100%;
+}
+
+.primary {
+    color: var(--primary);
+}
+
+.secondary {
+    color: var(--secondary);
+}
+
+.white {
+    color: var(--white);
+}
+
+.gradient {
+    display: table;
+    background: linear-gradient(to right, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Content */
+.content {
+    display: grid;
+    grid-gap: 2em 1em;
+    max-width: 50em;
+    margin: 3em auto 0 auto;
+    padding: 0 1em;
+}
+
+.content-tight {
+    max-width: 30em;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(var(--block-min), 1fr));
+    grid-gap: 1.4em 1.4em;
+}
+
+.row-tight {
+    --block-min: 12em;
+}
+
+.row-one-column {
+    --block-min: 1fr;
+}
+
+.content-block {
+    display: flex;
+    flex-direction: column;
+}
+
+.content-block > h1 {
+    margin-top: 0;
+}
+
+.loose-stack {
+    display: grid;
+    grid-template-rows: auto-fit;
+    grid-gap: .5em;
+    align-content: start;
+}
+
+.loose-stack > h1 {
+    margin: 0;
+}
+
+.tight-stack {
+    grid-gap: 0 1em;
+}
+
+/* Works */
+.works {
+    --block-size: 12em;
+    grid-gap: 1em;
+}
+
+a.work {
+    height: 6em;
+    background: linear-gradient(to right, var(--primary), var(--secondary));
+    background-position: center;
+    background-size: cover;
+    color: var(--white);
+    word-spacing: 30000px;
+    text-align: center;
+    font-size: 1.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: color .2s;
+}
+
+a.work > * {
+    color: var(--white);
+}
+
+a.work:hover {
+    color: var(--primary);
+}
+
+/* Images */
+.two-images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1em;
+}
+
+@media (max-width: 600px) {
+    .two-images {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Work summary */
+.work-summary {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 1em;
+    grid-gap: 2em 1em;
+    padding: 1.2em;
+    text-align: center;
+}
+
+.work-summary-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 700px) {
+  .work-summary {
+      grid-template-columns: repeat(2, 1fr);
+  }
+
+  .work-summary-3 {
+    grid-template-columns: repeat(3, 1fr);      
+  }
+}
+
+@media (max-width: 450px) {
+  .work-summary {
+      grid-template-columns: 1fr;
+  }
+}
+
+.work-summary > div {
+    display: grid;
+    grid-gap: .5em;
+    align-content: start;
+}
+
+.work-summary > div > * {
+    color: var(--white);
+}
+
+.work-summary > div > h2 {
+    font-family: MADEGoodTimeScript, sans-serif;
+}
+
+.work-summary > div > h2::after {
+    font-size: .6em;
+    content: '\2022\00a0\00a0\00a0\2022\00a0\00a0\00a0\2022';
+    display: block;
+    margin-top: .2em;
+}
+
+.work-summary > div > div {
+    font-family: ubuntu-light, sans-serif;
+}
+
+.work-summary a {
+    font-family: ubuntu-medium, sans-serif;
+    text-decoration: underline;
+    margin-left: auto;
+    margin-right: auto;
+    color: var(--white);
+}
+
+.work-summary a:hover {
+    color: var(--black);
+}
+
+/* Technologies */
+.bg-gradient {
+    background: linear-gradient(to right, var(--primary), var(--secondary));
+}
+
+.tech {
+    --block-min: 10em;
+    grid-gap: 1em .2em;
+    padding: 1.2em;
+    text-align: center;
+}
+
+.tech > a {
+    color: var(--white);
+}
+
+.tech > a::before {
+    content: '{\00a0\00a0';
+}
+
+.tech > a::after {
+    content: '\00a0\00a0}';
+}
+
+.tech > a:hover {
+    color: var(--black);
+}
+
+/* Social */
+.social {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1em .2em;
+    margin-top: 2em;
+    padding: 1.2em;
+    text-align: center;
+}
+
+.social > a > img {
+    max-width: 36px;
+    transition: filter .2s;
+}
+
+.social > a {
+    color: var(--white);
+    font-size: 1.2em;
+}
+
+.social > a:hover > img {
+    filter: invert(80%);
+}
+
+/* Make sure these apply after everything else */
+a:hover {
+    color: var(--primary);
+}
+</style><style>.preserveAspectRatio {
+    padding: 56.25% 0 0 0;
+    position: relative;
+    margin-bottom: .5em;
+}
+
+iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%
+}
+</style><style>.preserveAspectRatio {
+    padding: 56.25% 0 0 0;
+    position: relative;
+    margin-bottom: .5em;
+}
+
+iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%
+}
+</style><title>Generative visual framework - james kneafsey, Berlin-based creative developer</title><meta name="viewport" content="initial-scale=1.0"></head><body><style>#header {
+    width: 100%;
+}
+
+a#me {
+    text-decoration: none;
+    display: block;
+}
+
+a#me > * {
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+a#me > .name {
+    font-family: ubuntu-medium, sans-serif;
+    letter-spacing: .1em;
+    font-size: 1.6em;
+}
+
+a#me > .sub {
+    font-family: ubuntu-light, sans-serif;
+    font-size: 1.4em;
+}
+</style><div id="header"><a id="me" href="/"><div class="name gradient">james kneafsey</div><div class="sub gradient">creative developer</div></a><style>ul#navbar {
+    font-family: ubuntu-condensed, sans-serif;
+    text-transform: uppercase;
+    max-width: 15em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2em;
+    padding: 0 1.5em;
+    display: grid;
+    grid-template-columns: auto 1fr auto 1fr auto;
+}
+
+ul#navbar > li {
+    list-style: none;
+}
+
+ul#navbar > li > a {
+    font: 1.2em ubuntu-condensed, sans-serif;
+    text-decoration: none;
+    transition: all .2s;
+}
+
+ul#navbar > li > a.primary {
+    letter-spacing: .2em;
+}
+
+ul#navbar:hover a {
+    opacity: 0.7;
+}
+
+ul#navbar a:hover {
+    opacity: 1;
+    color: var(--primary);
+}
+</style><ul id="navbar"><li><a class="secondary" href="/about">about</a></li><li></li><li><a class="primary" href="/work">work</a></li><li></li><li><a class="secondary" href="/contact">contact</a></li><li></li></ul></div><div class="content"><h1 class="page-title">Generative visual framework</h1><div class="preserveAspectRatio"><iframe src="https://player.vimeo.com/video/187364057?title=0&amp;byline=0&amp;portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div><div class="row"><div class="content-block loose-stack"><h2>Make some noise</h2><div>A band's debut EP needs to make a strong impression. Usually a release tour is the vehicle to get it out, but
+in this case that was not possible. The approach? Release
+a promotional video that pulls the audience directly into
+the songs with generative visuals.</div><div>ARLEQUINO is an alternative hard rock band. Unknown, but with a self-produced debut EP and an eagerness to get
+it out. With the constraint of operating as a "remote band",
+a gigging schedule wasn't yet on the cards so an alternative
+strategy was needed to make some (more) noise.</div></div><div class="content-block loose-stack"><h2>Visual agents</h2><div>I developed a promotional video capturing both the energy of the songs and the technical nature of how the band produces
+its sound. In devising a way to map the songs to the visuals
+I reduced it to its most immediate and let the sound intensity
+alone drive everything. Then I threw in some agents to fly around
+the scene and let them also spell out the video's text placements.</div><div>The visuals were produced from a newly built openFrameworks application written in C++ and some GLSL (shaders) for lighting
+effects. The application has a universal code design such that
+it can be adapted to a multitude of use cases. Specifically new
+movements and visualisations of the agents can be easily written
+and plugged in.</div></div></div><div class="work-summary bg-gradient"><div><h2>Made for</h2><a href="https://arlequino.band">ARLEQUINO</a></div><div><h2>My role</h2><div>Direction</div><div>Visual concept</div><div>Development</div></div><div><h2>Crafted with</h2><div>openFrameworks</div><div>C++</div><div>shaders</div></div><div><h2>Source code</h2><a href="https://github.com/sesneaky/ArlequinoPromo">Github</a></div></div></div><style>.footer > div {
+    display: table;
+    margin: 2em auto;
+    text-align: center;
+    line-height: 2em;
+}
+</style><div class="footer"><div>&copy;&nbsp;copyright&nbsp;2018&nbsp;james&nbsp;kneafsey&nbsp;
+&nbsp;crafted&nbsp;with&nbsp;<span class="primary">&hearts;&nbsp;</span>in&nbsp;Berlin</div></div></body></html>
