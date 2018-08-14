@@ -100,7 +100,7 @@ img {
 
 .gradient {
     display: table;
-    background: linear-gradient(to right, var(--primary), var(--secondary));
+    background: -webkit-linear-gradient(left, #EB4E38, #EB9938);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -165,6 +165,7 @@ img {
 
 a.work {
     height: 6em;
+    background: -webkit-linear-gradient(left, var(--primary), var(--secondary));
     background: linear-gradient(to right, var(--primary), var(--secondary));
     background-position: center;
     background-size: cover;
@@ -268,6 +269,7 @@ a.work:hover {
 
 /* Technologies */
 .bg-gradient {
+    background: -webkit-linear-gradient(left, var(--primary), var(--secondary));
     background: linear-gradient(to right, var(--primary), var(--secondary));
 }
 
@@ -354,13 +356,14 @@ iframe {
 
 a#me {
     text-decoration: none;
-    display: block;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    grid-template-rows: auto auto;
+    justify-items: center;
 }
 
 a#me > * {
-    display: table;
-    margin-left: auto;
-    margin-right: auto;
+    display: inline-block;
 }
 
 a#me > .name {
@@ -373,7 +376,7 @@ a#me > .sub {
     font-family: ubuntu-light, sans-serif;
     font-size: 1.4em;
 }
-</style><div id="header"><a id="me" href="/"><div class="name white">james kneafsey</div><div class="sub white">creative developer</div></a><style>ul#navbar {
+</style><div id="header"><a id="me" href="/"><div></div><div class="white name">james kneafsey</div><div></div><div></div><div class="white sub">creative developer</div><div></div></a><style>ul#navbar {
     font-family: ubuntu-condensed, sans-serif;
     text-transform: uppercase;
     max-width: 15em;
