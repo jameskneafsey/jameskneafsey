@@ -100,9 +100,14 @@ img {
 
 .gradient {
     display: table;
-    background: -webkit-linear-gradient(left, #EB4E38, #EB9938);
+    background: -webkit-linear-gradient(left, var(--primary), var(--secondary));
+    background: linear-gradient(to right, var(--primary), var(--secondary));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+.bordered {
+    border: solid 2px var(--secondary);
 }
 
 /* Content */
@@ -296,6 +301,14 @@ a.work:hover {
     color: var(--black);
 }
 
+/* Skills */
+.skills {
+    --block-min: 10em;
+    grid-gap: 1em .2em;
+    padding: 1.2em;
+    text-align: center;
+}
+
 /* Social */
 .social {
     display: grid;
@@ -362,10 +375,6 @@ a#me {
     justify-items: center;
 }
 
-a#me > * {
-    display: inline-block;
-}
-
 a#me > .name {
     font-family: ubuntu-medium, sans-serif;
     letter-spacing: .1em;
@@ -411,7 +420,7 @@ ul#navbar a:hover {
     color: var(--primary);
 }
 </style><ul id="navbar"><li><a class="primary" href="/about">about</a></li><li></li><li><a class="secondary" href="/work">work</a></li><li></li><li><a class="secondary" href="/contact">contact</a></li><li></li></ul></div><div class="content"><div class="row"><div class="content-block loose-stack"><div>I strive to build well-crafted creative software.</div><div>This is software that does its job well and is a delight to use. To achieve this I combine creative practices
-used by designers and artists with robust software development methods.</div><div>My background in computer engineering, music and art generally leads me to creative projects such as <a href="/work/music-software">music software</a>, <a href="/work/augmented-reality">augmented reality </a>and <a href="/work/light-sculpture">physical computing</a>. If would like me to consult on your project please <a href="/contact">get in touch</a>.</div></div><div class="content-block"><img src="james.jpg"></div></div><div class="row row-one-column"><div><h1>Technologies</h1><div class="row bg-gradient tech"><a href="/work/music-software">Juce</a><a href="/work/generative-visual-framework">openFrameworks</a><a href="/work/augmented-reality">Unity</a><a href="/work/creative-web-app">React</a><a href="/work/music-software">Pure data</a><a href="/work/cinematic-computer-game">C++</a><a href="/work/augmented-reality">C#</a><a href="/work/creative-web-app">Javascript</a></div></div></div></div><style>.footer > div {
+used by designers and artists with robust software development methods.</div><div>My background in computer engineering, music and art generally leads me to creative projects such as <a href="/work/music-software">music software</a>, <a href="/work/augmented-reality">augmented reality </a>and <a href="/work/light-sculpture">physical computing</a>. If would like me to consult on your project please <a href="/contact">get in touch</a>.</div></div><div class="content-block"><img src="james.jpg"></div></div><div class="row"><div><h1>Services</h1><div class="row bordered skills"><div>Project direction</div><div>Idea generation</div><div>Solution design</div><div>Software development</div><div>Physical computing</div><div>Prototyping</div><div>Testing</div><div>Release</div></div></div><div><h1>Technologies</h1><div class="row bg-gradient tech"><a href="/work/music-software">Juce</a><a href="/work/generative-visual-framework">openFrameworks</a><a href="/work/augmented-reality">Unity</a><a href="/work/creative-web-app">React</a><a href="/work/music-software">Pure data</a><a href="/work/cinematic-computer-game">C++</a><a href="/work/augmented-reality">C#</a><a href="/work/creative-web-app">Javascript</a></div></div></div></div><style>.footer > div {
     display: table;
     margin: 2em auto;
     text-align: center;

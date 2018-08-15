@@ -100,9 +100,14 @@ img {
 
 .gradient {
     display: table;
-    background: -webkit-linear-gradient(left, #EB4E38, #EB9938);
+    background: -webkit-linear-gradient(left, var(--primary), var(--secondary));
+    background: linear-gradient(to right, var(--primary), var(--secondary));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+.bordered {
+    border: solid 2px var(--secondary);
 }
 
 /* Content */
@@ -296,6 +301,14 @@ a.work:hover {
     color: var(--black);
 }
 
+/* Skills */
+.skills {
+    --block-min: 10em;
+    grid-gap: 1em .2em;
+    padding: 1.2em;
+    text-align: center;
+}
+
 /* Social */
 .social {
     display: grid;
@@ -360,10 +373,6 @@ a#me {
     grid-template-columns: 1fr auto 1fr;
     grid-template-rows: auto auto;
     justify-items: center;
-}
-
-a#me > * {
-    display: inline-block;
 }
 
 a#me > .name {
