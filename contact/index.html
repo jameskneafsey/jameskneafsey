@@ -121,21 +121,13 @@ img {
 }
 
 .content-tight {
-    max-width: 30em;
+    max-width: 36em;
 }
 
 .row {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(var(--block-min), 1fr));
     grid-gap: 1.4em 1.4em;
-}
-
-.row-tight {
-    --block-min: 12em;
-}
-
-.row-one-column {
-    --block-min: 1fr;
 }
 
 .content-block {
@@ -160,6 +152,18 @@ img {
 
 .tight-stack {
     grid-gap: 0 1em;
+}
+
+.my-shot {
+    background: url('/about/james.jpg') no-repeat;
+    background-size: contain;
+    background-position-x: center;
+    background-position-y: top;
+    padding-bottom: 80%;
+}
+
+.centred-content {
+    text-align: center;
 }
 
 /* Works */
@@ -419,7 +423,7 @@ ul#navbar a:hover {
     opacity: 1;
     color: var(--primary);
 }
-</style><ul id="navbar"><li><a class="secondary" href="/about">about</a></li><li></li><li><a class="secondary" href="/work">work</a></li><li></li><li><a class="primary" href="/contact">contact</a></li><li></li></ul></div><div class="content content-tight"><div class="row row-tight"><div class="content-block loose-stack"><div>Say hello at:</div><a href="mailto:hello@jameskneafsey.com">hello@jameskneafsey.com</a></div><div class="content-block loose-stack"><div><div>james kneafsey</div><div>creative developer</div></div><div><div>Lacuna Lab</div><div>Paul-Lincke-Ufer 44a</div><div>10999 Berlin</div><div>Germany</div></div></div></div><div class="social bg-gradient"><a href="https://github.com/sesneaky"><img src="github.png"></a><a href="https://www.linkedin.com/in/jameskneafsey/"><img src="linkedIn.png"></a><a href="https://vimeo.com/sesneaky"><img src="vimeo.png"></a><a href="https://twitter.com/sesneaky"><img src="twitter.png"></a></div></div><style>.footer > div {
+</style><ul id="navbar"><li><a class="secondary" href="/about">about</a></li><li></li><li><a class="secondary" href="/work">work</a></li><li></li><li><a class="primary" href="/contact">contact</a></li><li></li></ul></div><div class="content content-tight"><div class="row"><div class="content-block loose-stack centred-content"><div>Say hello at:</div><a href="mailto:hello@jameskneafsey.com">hello@jameskneafsey.com</a><div><div>james kneafsey</div><div>creative developer</div></div><div><div>Lacuna Lab</div><div>Paul-Lincke-Ufer 44a</div><div>10999 Berlin</div><div>Germany</div></div></div></div><div class="social bg-gradient"><a href="https://github.com/sesneaky"><img src="github.png"></a><a href="https://www.linkedin.com/in/jameskneafsey/"><img src="linkedIn.png"></a><a href="https://vimeo.com/sesneaky"><img src="vimeo.png"></a><a href="https://twitter.com/sesneaky"><img src="twitter.png"></a></div></div><style>.footer > div {
     display: table;
     margin: 2em auto;
     text-align: center;

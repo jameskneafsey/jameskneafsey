@@ -121,21 +121,13 @@ img {
 }
 
 .content-tight {
-    max-width: 30em;
+    max-width: 36em;
 }
 
 .row {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(var(--block-min), 1fr));
     grid-gap: 1.4em 1.4em;
-}
-
-.row-tight {
-    --block-min: 12em;
-}
-
-.row-one-column {
-    --block-min: 1fr;
 }
 
 .content-block {
@@ -160,6 +152,18 @@ img {
 
 .tight-stack {
     grid-gap: 0 1em;
+}
+
+.my-shot {
+    background: url('/about/james.jpg') no-repeat;
+    background-size: contain;
+    background-position-x: center;
+    background-position-y: top;
+    padding-bottom: 80%;
+}
+
+.centred-content {
+    text-align: center;
 }
 
 /* Works */
@@ -419,8 +423,8 @@ ul#navbar a:hover {
     opacity: 1;
     color: var(--primary);
 }
-</style><ul id="navbar"><li><a class="primary" href="/about">about</a></li><li></li><li><a class="secondary" href="/work">work</a></li><li></li><li><a class="secondary" href="/contact">contact</a></li><li></li></ul></div><div class="content"><div class="row"><div class="content-block loose-stack"><div>I strive to build well-crafted creative software.</div><div>This is software that does its job well and is a delight to use. To achieve this I combine creative practices
-used by designers and artists with robust software development methods.</div><div>My background in computer engineering, music and art generally leads me to creative projects such as <a href="/work/music-software">music software</a>, <a href="/work/augmented-reality">augmented reality </a>and <a href="/work/light-sculpture">physical computing</a>. If would like me to consult on your project please <a href="/contact">get in touch</a>.</div></div><div class="content-block"><img src="james.jpg"></div></div><div class="row"><div><h1>Services</h1><div class="row bordered skills"><div>Project direction</div><div>Idea generation</div><div>Solution design</div><div>Software development</div><div>Physical computing</div><div>Prototyping</div><div>Testing</div><div>Release</div></div></div><div><h1>Technologies</h1><div class="row bg-gradient tech"><a href="/work/music-software">Juce</a><a href="/work/generative-visual-framework">openFrameworks</a><a href="/work/augmented-reality">Unity</a><a href="/work/creative-web-app">React</a><a href="/work/music-software">Pure data</a><a href="/work/cinematic-computer-game">C++</a><a href="/work/augmented-reality">C#</a><a href="/work/creative-web-app">Javascript</a></div></div></div></div><style>.footer > div {
+</style><ul id="navbar"><li><a class="primary" href="/about">about</a></li><li></li><li><a class="secondary" href="/work">work</a></li><li></li><li><a class="secondary" href="/contact">contact</a></li><li></li></ul></div><div class="content"><div class="row"><div class="content-block loose-stack"><h1>Well-crafted creative applications</h1><div>These are applications that perform well and are a delight to use. In order to produce them I combine creative practices
+used by designers and artists with robust software development methods.</div><div>My background in computer engineering, music and art draws me to creative projects such as <a href="/work/music-software">music software</a>, <a href="/work/augmented-reality">augmented reality </a>and <a href="/work/light-sculpture">physical computing</a>. If would like me to consult on your project please <a href="/contact">get in touch</a>.</div></div><div class="content-block my-shot"></div></div><div class="row"><div><h1>Consulting</h1><div class="row bordered skills"><div>Project direction</div><div>Idea generation</div><div>Solution design</div><div>Software development</div><div>Physical computing</div><div>Prototyping</div><div>Testing</div><div>Release</div></div></div><div><h1>Technologies</h1><div class="row bg-gradient tech"><a href="/work/music-software">Juce</a><a href="/work/generative-visual-framework">openFrameworks</a><a href="/work/augmented-reality">Unity</a><a href="/work/creative-web-app">React</a><a href="/work/music-software">Pure data</a><a href="/work/cinematic-computer-game">C++</a><a href="/work/augmented-reality">C#</a><a href="/work/creative-web-app">Javascript</a></div></div></div></div><style>.footer > div {
     display: table;
     margin: 2em auto;
     text-align: center;

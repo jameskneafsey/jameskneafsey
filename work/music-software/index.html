@@ -121,21 +121,13 @@ img {
 }
 
 .content-tight {
-    max-width: 30em;
+    max-width: 36em;
 }
 
 .row {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(var(--block-min), 1fr));
     grid-gap: 1.4em 1.4em;
-}
-
-.row-tight {
-    --block-min: 12em;
-}
-
-.row-one-column {
-    --block-min: 1fr;
 }
 
 .content-block {
@@ -160,6 +152,18 @@ img {
 
 .tight-stack {
     grid-gap: 0 1em;
+}
+
+.my-shot {
+    background: url('/about/james.jpg') no-repeat;
+    background-size: contain;
+    background-position-x: center;
+    background-position-y: top;
+    padding-bottom: 80%;
+}
+
+.centred-content {
+    text-align: center;
 }
 
 /* Works */
@@ -419,15 +423,20 @@ ul#navbar a:hover {
     opacity: 1;
     color: var(--primary);
 }
-</style><ul id="navbar"><li><a class="secondary" href="/about">about</a></li><li></li><li><a class="primary" href="/work">work</a></li><li></li><li><a class="secondary" href="/contact">contact</a></li><li></li></ul></div><div class="content"><h1 class="page-title">Music software</h1><div class="two-images"><img src="vis.png"><img src="Looping02.jpg"></div><div class="row"><div class="content-block loose-stack"><h2>Tools for bands</h2><div>As a musician and music technologist I am driven to create software tools for musicians.</div><div>One area I focus on is bands that add computer-generated sounds to acoustic music. Although the generated sounds open up a
-range of sonic expression they can
-also add challenges. It can be difficult, for example
-to maintain the natural groove and feel of the acoustic music once
-the generated music is introduced. I have built a number of
-solutions to this problem combining hardware and software
-which have been used in a live context.</div></div><div class="content-block loose-stack"><h2>Complete solutions</h2><div>The development of a complete solution often involves the use of both hardware and software since custom stage controls
-and indicators such as footpedals and visuals are often
-needed. I use a range of technologies for a complete solution
+</style><ul id="navbar"><li><a class="secondary" href="/about">about</a></li><li></li><li><a class="primary" href="/work">work</a></li><li></li><li><a class="secondary" href="/contact">contact</a></li><li></li></ul></div><div class="content"><h1 class="page-title">Music software</h1><div class="two-images"><img src="vis.png"><img src="Looping02.jpg"></div><div class="row"><div class="content-block loose-stack"><h2>Tools for bands</h2><div>I know a lot of bands and musicians (I am one myself) so I have first-hand knowledge of their joys and struggles with technology.
+One topic that interests me greatly is the groove in electroacoustic
+bands. In an acoustic band, the groove is driven by the rhythm
+section, for example a drummer and bass player. In an electroacoustic
+band using computer-generated music the groove is usually driven
+by the computer. In this case the music can feel less 'natural'. Some
+bands love the feel of the computer groove but
+others prefer to let the rhythm section take it back and drive it.
+This is where my work comes in. I have built a number of solutions
+to the natural groove problem using both hardware and software.
+These have been used live to the delight of band members and audience
+members alike.</div></div><div class="content-block loose-stack"><h2>Complete solutions</h2><div>When it comes to music technology the development of a complete solution often involves the use of both hardware and software since
+custom stage controls and indicators such as footpedals and visuals 
+are often needed. I use a range of technologies for a complete solution
 including Pure data, Juce, C++, Arduino and custom electronics.</div></div></div><div class="work-summary work-summary-3 bg-gradient"><div><h2>Made for</h2><a href="https://arlequino.band">ARLEQUINO</a><a href="https://beag.bandcamp.com/">nóiméad beag</a><a href="http://waterpistol.nl/">waterpistol</a></div><div><h2>My role</h2><div>Direction</div><div>Development</div><div>Electronics</div></div><div><h2>Crafted with</h2><div>Pure data</div><div>Juce</div><div>C++</div><div>Electronics</div></div></div></div><style>.footer > div {
     display: table;
     margin: 2em auto;

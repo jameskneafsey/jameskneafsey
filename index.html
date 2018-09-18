@@ -121,21 +121,13 @@ img {
 }
 
 .content-tight {
-    max-width: 30em;
+    max-width: 36em;
 }
 
 .row {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(var(--block-min), 1fr));
     grid-gap: 1.4em 1.4em;
-}
-
-.row-tight {
-    --block-min: 12em;
-}
-
-.row-one-column {
-    --block-min: 1fr;
 }
 
 .content-block {
@@ -160,6 +152,18 @@ img {
 
 .tight-stack {
     grid-gap: 0 1em;
+}
+
+.my-shot {
+    background: url('/about/james.jpg') no-repeat;
+    background-size: contain;
+    background-position-x: center;
+    background-position-y: top;
+    padding-bottom: 80%;
+}
+
+.centred-content {
+    text-align: center;
 }
 
 /* Works */
@@ -483,17 +487,22 @@ function loadImages() {
 
 window.onload = loadImages();
 
-function setFeaturedWork() {
-  works[currentWorkIndex].style.opacity = 0;
+function cycleFeaturedWork() {
+  let nextWorkIndex = currentWorkIndex + 1;
 
-  currentWorkIndex++;
-
-  if (currentWorkIndex == directories.length) {
-    currentWorkIndex = 0;
+  if (nextWorkIndex == directories.length) {
+    nextWorkIndex = 0;
   }
 
-  works[currentWorkIndex].style.opacity = 1;
+  // If image is loaded
+  if (works[nextWorkIndex].style.backgroundImage.length > 0) {
+    works[currentWorkIndex].style.opacity = 0;
+
+    currentWorkIndex = nextWorkIndex;
+
+    works[currentWorkIndex].style.opacity = 1;
+  }
 }
 
-setInterval(setFeaturedWork, 8000);
+setInterval(cycleFeaturedWork, 8000);
 </script></body></html>
